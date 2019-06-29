@@ -32,7 +32,7 @@
     <link href="admin/vendor/slick/slick.css" rel="stylesheet" media="all">
     <link href="admin/vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="admin/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
-
+    <link href="admin/css/style.css" rel="stylesheet" media="all">
     <!-- Main CSS-->
     <link href="admin/css/theme.css" rel="stylesheet" media="all">
 
@@ -52,12 +52,15 @@
                         <div class="login-form">
                             <form action="logic.php" method="post">
                                 <div class="form-group">
-                                    <label>Email Address</label>
-                                    <input class="au-input au-input--full" type="email" name="email" placeholder="Email">
+                                    <label>Email</label>
+                                    <input class="au-input au-input--full" type="email" name="email" data-validation="required" 
+                                    data-validation-error-msg="Email is required" placeholder="Email">
                                 </div>
                                 <div class="form-group">
                                     <label>Password</label>
-                                    <input class="au-input au-input--full" type="password" name="password" placeholder="Password">
+                                    <input class="au-input au-input--full" type="password" name="password" placeholder="Password"
+                                    data-validation="required" 
+                                    data-validation-error-msg="password is required">
                                 </div>
                                 <div class="login-checkbox">
                                     <label>
@@ -108,10 +111,13 @@
     <script src="admin/vendor/chartjs/Chart.bundle.min.js"></script>
     <script src="admin/vendor/select2/select2.min.js">
     </script>
-
-    <!-- Main JS-->
     <script src="admin/js/main.js"></script>
-
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.form-validator.min.js"></script>
+    <script>
+    $.validate({
+    });
+    </script>
 </body>
 
 </html>
